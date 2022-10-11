@@ -4,9 +4,13 @@ import {useStore} from "vuex"
 
 const store = useStore()
 
+let data = computed(() => {
+  return store.state
+})
+
 onMounted(() => {
   store.dispatch("getUser")
-  console.log(store.state)
+  console.log(data)
 })
 
 </script>
