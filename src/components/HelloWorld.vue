@@ -6,6 +6,7 @@ const store = useStore()
 
 onMounted(() => {
   store.dispatch("getUser")
+  console.log(store.state)
 })
 
 </script>
